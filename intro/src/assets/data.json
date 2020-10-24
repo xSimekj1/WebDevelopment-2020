@@ -1,0 +1,36 @@
+{
+    "pizza": [
+        {
+            "id": 1,
+            "name": "Al Tonno",
+            "description": [
+                "tomat", "mozarella", "tuniak", "cibuľa"
+            ],
+            "price": "7,50"
+        },
+        {
+            "id": 2,
+            "name": "Quatro stagioni",
+            "description": [
+                "tomat", "mozarella", "šampióny", "ančovičky", "šunka", "artičoky"
+            ],
+            "price": "6,50"
+        },
+        {
+            "id": 3,
+            "name": "Hawai",
+            "description": [
+                "tomat", "mozarella", "šunka", "ananás"
+            ],
+            "price": "6,00"
+        },
+        {
+            "id": 4,
+            "name": "Capricciosa",
+            "description": [
+                "tomat", "mozarella", "šunka", "šampióny"
+            ],
+            "price": "6,50"
+        }
+    ]
+}
