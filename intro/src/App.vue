@@ -6,7 +6,7 @@
         <div
           v-for="pizza in pizzas"
           :key="pizza.id"
-          class="col col-1-3"
+          class="col col-1-4"
         >
         <span v-text="'<pizza-card>'"></span>
         <div class="card-wrapper">

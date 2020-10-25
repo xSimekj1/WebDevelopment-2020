@@ -3,7 +3,7 @@
   <!-- CSS kopiruje strukturu dat -->
   <div class="pizza-card">
     <div class="pizza-card__image-wrapper">
-      <img src="../assets/pizza.jpg" alt="pizza image" class="pizza-card__image">
+      <img src="../assets/pizza.png" alt="pizza image" class="pizza-card__image">
     </div>
     <div class="pizza-card__body">
       <h2
@@ -24,12 +24,15 @@
           </li>
         </ul>
       </div>
-      <div class="pizza-card__bottom">
-        <!-- String literal: formatuje text s premennymi do spolocneho vystupneho retazca-->
-        <span v-text="`Cena: ${pizza.price}€`"></span>
-        <!-- BAD PRACTICE: manualne spajanie stringov-->
-        <!-- <span v-text="'Cena:' + pizza.price + '€'"></span> -->
-      </div>
+    </div>
+    <div class="pizza-card__bottom">
+      <!-- String literal: formatuje text s premennymi do spolocneho vystupneho retazca-->
+      <span
+        class="pizza-card__price"
+        v-text="`Cena: ${pizza.price}€`"
+      ></span>
+      <!-- BAD PRACTICE: manualne spajanie stringov-->
+      <!-- <span v-text="'Cena:' + pizza.price + '€'"></span> -->
     </div>
   </div>
 </template>
@@ -48,24 +51,30 @@ export default {
 
 <style lang="less">
 .pizza-card {
+  display: flex;
+  flex-direction: column;
+
   padding: 16px;
 
   border-radius: 5px;
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
 }
 
 .pizza-card__title {
-  color: #FFA69E;
-  border-bottom: 1px solid #FFA69E;
   margin: 8px;
   padding-bottom: 16px;
+
+  color: #FFA69E;
+  border-bottom: 1px solid #FFA69E;
 }
 
 .pizza-card__list {
-  padding: 0;
   display: flex;
+
   flex-wrap: wrap;
   justify-content: center;
+
+  padding: 0;
 }
 
 .pizza-card__list-item {
@@ -76,5 +85,15 @@ export default {
   border: 1px solid #FFA69E;
   background: #FFA69E;
   border-radius: 15px;
+}
+
+.pizza-card__bottom {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.pizza-card__price {
+  align-self: flex-end;
 }
 </style>
