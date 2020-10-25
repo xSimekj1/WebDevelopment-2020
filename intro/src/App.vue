@@ -16,6 +16,14 @@
         </div>
         </div>
       </div>
+      <div
+        class="row"
+        v-for="pizza in pizzas"
+        :key="pizza.id">
+        <pizza-list-item
+          :pizza="pizza"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -23,10 +31,12 @@
 <script>
 import data from './assets/data.json';
 import PizzaCard from './components/PizzaCard.vue';
+import PizzaListItem from './components/PizzaListItem.vue';
 
 export default {
   name: 'App',
   components: {
+    PizzaListItem,
     PizzaCard,
   },
   data() {
