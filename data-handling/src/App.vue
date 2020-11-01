@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <div 
-      v-for="pizza in pizzas"
-      :key="pizza.id"
-      class="card-holder"
-    >
-      <pizza-card :pizza="pizza"/>
+    <div class="gallery">
+      <div 
+        v-for="pizza in pizzas"
+        :key="pizza.id"
+        class="card-holder"
+      >
+        <pizza-card :pizza="pizza"/>
+      </div>
     </div>
   </div>
 </template>
@@ -36,5 +38,17 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  padding: 15px;
+}
+
+.card-holder {
+  padding: 5px;
 }
 </style>
