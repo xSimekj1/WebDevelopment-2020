@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="gallery">
+      <!-- Pre kazdu pizzu nam vytvori card-holder a v nom komponentu pizza-kard s jej vlastnymi datami -->
       <div 
         v-for="pizza in pizzas"
         :key="pizza.id"
@@ -11,15 +12,18 @@
           @pizzaUpdated="pizzaUpdated"
         />
       </div>
+      <!-- Po vytvoreni vsetkych pizz vytvor este jednu ale teraz bez dat a s props isNew -->
       <div 
         class="card-holder"
       >
+        <!-- @pizzaCreated, @canceled su nase vlastne eventy ktore sme si definovali v PizzaCard -->
         <pizza-card 
           v-if="createPizza" 
           isNew
           @canceled="createPizza = false"
           @pizzaCreated="pizzaCreated"
         />
+        <!-- @click je nativny javascript event ktory sa zavola vzdy pri kliknuty na dany element -->
         <button v-else @click="createPizza = true">New pizza</button>
       </div>
     </div>
@@ -39,12 +43,20 @@ export default {
   components: {
     PizzaCard
   },
+  // App.vue je root komponent, nasa skutocna stranka ktoru vidime, vsetko ostatne je len obsah ktory sa v nom generuje
+  // Root element nema props, pretoze mu ich nemame z kade poslat
+  
+  // Data sú data ktoré máme dostupné iba lokálne v ramci komponenty,
+  // Mozeme s nimi lubovolne narabat a vykonavat nad nimi operacie a menit ich.
   data() {
     return {
       pizzas: data.pizza,
       createPizza: false,
     };
   },
+  
+  // Methods sú funkcie ktoré sa vyvolajú pri manipulácií so stránkou (napr. používateľ klikne na tlačítko) 
+  // Môžu príjímať parametre
   methods: {
     pizzaCreated(event) {
       this.pizzas.push(event)
@@ -58,7 +70,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

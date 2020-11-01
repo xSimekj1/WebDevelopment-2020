@@ -1,5 +1,6 @@
 <template>
   <div class="pizza-card">
+    <!-- Template je pomocny tag v DOM ktory sa nevygeneruje ale sluzi nam napriklad pre vytvorenie rozhodovacej logiky -->
     <template v-if="!isNew">
       <div class="pizza-card__head">
         <img src="https://via.placeholder.com/300x200" alt="pizzaImage">
@@ -8,6 +9,7 @@
         <h2 class="pizza-card__name" v-text="localPizza.name"/>
         <div class="pizza-card__description">
           <ul class="pizza-card__list">
+            <!-- Vygeneruj mi pekne po jendom vsekty polozky v description -->
             <li 
               v-for="(ingredient, index) of localPizza.description" 
               :key="index"
@@ -17,7 +19,7 @@
             <li v-if="!editIngredients">
               <button @click="editIngredients = true">Pridať surovinu</button>
             </li>
-            <li v-if="editIngredients">
+            <li v-else>
               <div>
                 <input type="text" v-model="newIngredient">
                 <button @click="addIngredient()">+</button>
@@ -27,9 +29,11 @@
         </div>
       </div>
       <div class="pizza-card__footer">
+        <!-- v-text prepisuje vnutro elementu textovym obsahom ktory mu posleme ako parameter -->
         <span v-text="`Cena: ${localPizza.price} €`"></span>
       </div>
     </template>
+    <!-- Ak povodna podmienka neplati vygeneruj tuto cast -->
     <template v-else>
       <div class="pizza-card__head">
         <button class="pizza-card__exit-button" @click="$emit('canceled')">x</button>
@@ -77,6 +81,8 @@
 
 export default {
   name: 'PizzaCard',
+  // Props sú dáta ktoré nám do komponentu prichádzajú z rodicovskej komponenty.
+  // Pouzivame ich vzdy tak ako nam prídu, nikdy ich nemenime v ramci komponenty.
   props: {
     pizza: {
       type: Object,
@@ -87,6 +93,8 @@ export default {
       default: false,
     }
   },
+  // Data sú data ktoré máme dostupné iba lokálne v ramci komponenty,
+  // Mozeme s nimi lubovolne narabat a vykonavat nad nimi operacie a menit ich.
   data() {
     return {
       localPizza: null,
@@ -95,9 +103,21 @@ export default {
       newPizza: null,
     };
   },
+  // Metoda ktora sa vola vzdy este predtym ako prvykrat vykresli data na obrazovku
   created() {
     this.init();
   },
+  // Computed sú funkcie ktoré sa vyvolajú automaticky za behu aplikácie a reagujú na každú zmenu vyvolanú v komponente (podobne ako watcher)
+  // Nepríjmajú parametre, uľahčujú prácu s dátami a pracujeme s nimi ako s ostatnými premennými.
+  computed: {
+    pizzaDiscounted() {
+      const pizzaDiscounted = JSON.parse(JSON.stringify(this.localPizza));
+      pizzaDiscounted.price -= 3;
+      return pizzaDiscounted;
+    }
+  },
+  // Methods sú funkcie ktoré sa vyvolajú pri manipulácií so stránkou (napr. používateľ klikne na tlačítko) 
+  // Môžu príjímať parametre
   methods: {
     init() {
       if (this.pizza) {
