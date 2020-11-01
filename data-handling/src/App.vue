@@ -1,18 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div 
+      v-for="pizza in pizzas"
+      :key="pizza.id"
+      class="card-holder"
+    >
+      <pizza-card :pizza="pizza"/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import data from './assets/data.json';
+
+import PizzaCard from './components/PizzaCard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    PizzaCard
+  },
+  data() {
+    return {
+      pizzas: data.pizza,
+    };
+  },
 }
 </script>
 

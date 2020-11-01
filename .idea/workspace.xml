@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:kurz" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:kurz" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b9558744-1c83-4a52-82f8-60698381add8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data-handling/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/data-handling/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data-handling/src/components/HelloWorld.vue" beforeDir="false" />
     </list>
@@ -45,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603641577964</updated>
       <workItem from="1603641585399" duration="1503000" />
+      <workItem from="1604236682788" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="[kurz-1] Update README">
       <created>1603643050861</created>
@@ -74,12 +103,22 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[kurz-1] Update README" />
     <MESSAGE value="[kurz-2] Init project" />
     <MESSAGE value="[kurz-2] Remove unused files" />
+    <MESSAGE value="[kurz-2] Add less loader" />
     <option name="LAST_COMMIT_MESSAGE" value="[kurz-2] Remove unused files" />
   </component>
   <component name="WindowStateProjectService">
@@ -87,6 +126,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="390" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604233978418" />
+    <state x="614" y="313" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1604236703573">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="614" y="313" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1536.824@0.0.1536.824" timestamp="1604236703573" />
     <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1604233984059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
