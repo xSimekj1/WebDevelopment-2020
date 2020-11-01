@@ -30,7 +30,7 @@
       </div>
       <div class="pizza-card__footer">
         <!-- v-text prepisuje vnutro elementu textovym obsahom ktory mu posleme ako parameter -->
-        <span v-text="`Cena: ${localPizza.price} €`"></span>
+        <span v-text="`Cena: ${localPizza.price} € / ${pizzaChild.price} €`"></span>
       </div>
     </template>
     <!-- Ak povodna podmienka neplati vygeneruj tuto cast -->
@@ -110,10 +110,10 @@ export default {
   // Computed sú funkcie ktoré sa vyvolajú automaticky za behu aplikácie a reagujú na každú zmenu vyvolanú v komponente (podobne ako watcher)
   // Nepríjmajú parametre, uľahčujú prácu s dátami a pracujeme s nimi ako s ostatnými premennými.
   computed: {
-    pizzaDiscounted() {
-      const pizzaDiscounted = JSON.parse(JSON.stringify(this.localPizza));
-      pizzaDiscounted.price -= 3;
-      return pizzaDiscounted;
+    pizzaChild() {
+      const pizzaChild = JSON.parse(JSON.stringify(this.localPizza));
+      pizzaChild.price -= 3;
+      return pizzaChild;
     }
   },
   // Methods sú funkcie ktoré sa vyvolajú pri manipulácií so stránkou (napr. používateľ klikne na tlačítko) 
