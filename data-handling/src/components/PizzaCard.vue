@@ -1,24 +1,75 @@
 <template>
   <div class="pizza-card">
-    <div class="pizza-card__head">
-      <img src="https://via.placeholder.com/300x200" alt="pizzaImage">
-    </div>
-    <div class="pizza-card__body">
-      <h2 class="pizza-card__name" v-text="pizza.name"/>
-      <div class="pizza-card__description">
-        <ul class="pizza-card__list">
-          <li 
-            v-for="(ingredient, index) of pizza.description" 
-            :key="index"
-            class="pizza-card__list-item"
-            v-text="ingredient"
-          />
-        </ul>
+    <template v-if="!isNew">
+      <div class="pizza-card__head">
+        <img src="https://via.placeholder.com/300x200" alt="pizzaImage">
       </div>
-    </div>
-    <div class="pizza-card__footer">
-      <span v-text="'Cena: ' + pizza.price + ' €'"></span>
-    </div>
+      <div class="pizza-card__body">
+        <h2 class="pizza-card__name" v-text="localPizza.name"/>
+        <div class="pizza-card__description">
+          <ul class="pizza-card__list">
+            <li 
+              v-for="(ingredient, index) of localPizza.description" 
+              :key="index"
+              class="pizza-card__list-item"
+              v-text="ingredient"
+            />
+            <li v-if="!editIngredients">
+              <button @click="editIngredients = true">Pridať surovinu</button>
+            </li>
+            <li v-if="editIngredients">
+              <div>
+                <input type="text" v-model="newIngredient">
+                <button @click="addIngredient()">+</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pizza-card__footer">
+        <span v-text="`Cena: ${localPizza.price} €`"></span>
+      </div>
+    </template>
+    <template v-else>
+      <div class="pizza-card__head">
+        <button class="pizza-card__exit-button" @click="$emit('canceled')">x</button>
+        <img src="https://via.placeholder.com/300x200" alt="pizzaImage">
+      </div>
+      <div class="pizza-card__body">
+        <div 
+          class="pizza-card__name"
+          :class="{'pizza-card__name--input' : isNew}"
+        >
+          <input 
+            v-model="newPizza.name" 
+            type="text" 
+            placeholder="Nova pizza..."
+          >
+        </div>
+        <div class="pizza-card__description">
+          <ul class="pizza-card__list">
+            <li 
+              v-for="(ingredient, index) of newPizza.description" 
+              :key="index"
+              class="pizza-card__list-item"
+              v-text="ingredient"
+            />
+            <li v-if="!editIngredients">
+              <button @click="editIngredients = true">Pridať surovinu</button>
+            </li>
+            <li v-if="editIngredients">
+              <div>
+                <input type="text" v-model="newIngredient">
+                <button @click="addIngredient()">+</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pizza-card__footer">
+        <button @click="createPizza()">Pridať pizzu</button>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -29,8 +80,52 @@ export default {
   props: {
     pizza: {
       type: Object,
-      required: true,
+      default: null,
     },
+    isNew: {
+      type: Boolean,
+      default: false,
+    }
+  },
+  data() {
+    return {
+      localPizza: null,
+      editIngredients: false,
+      newIngredient: '',
+      newPizza: null,
+    };
+  },
+  created() {
+    this.init();
+  },
+  methods: {
+    init() {
+      if (this.pizza) {
+        this.localPizza = JSON.parse(JSON.stringify(this.pizza));
+      } else {
+        this.newPizza = {
+          name: '',
+          price: '',
+          description: ['tomat'],
+        }
+      }
+    },
+    addIngredient() {
+      if(this.isNew) {
+        this.newPizza.description.push(this.newIngredient);
+      } else {
+        this.localPizza.description.push(this.newIngredient);
+        this.localPizza.price += 0.5;
+        this.$emit('pizzaUpdated', this.localPizza);
+      }
+      this.newIngredient = null;
+      this.editIngredients = false;
+    },
+    createPizza() {
+      this.newPizza.price = this.newPizza.description.length + 3.5;
+      this.$emit('pizzaCreated', this.newPizza);
+      this.init();
+    }
   }
 }
 </script>
@@ -49,6 +144,8 @@ export default {
 }
 
 .pizza-card__head {
+  position: relative;
+
   height: 200px;
   width: 100%;
 
@@ -70,6 +167,18 @@ export default {
   border-bottom: 1px solid;
 }
 
+.pizza-card__name--input {
+  padding: 8px 10px;
+
+  input {
+    max-width: 90%;
+
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
 .pizza-card__list {
   list-style: none;
   padding: 0;
@@ -81,6 +190,12 @@ export default {
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 5px;
+}
+
+.pizza-card__exit-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 </style>

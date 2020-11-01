@@ -6,8 +6,25 @@
         :key="pizza.id"
         class="card-holder"
       >
-        <pizza-card :pizza="pizza"/>
+        <pizza-card 
+          :pizza="pizza"
+          @pizzaUpdated="pizzaUpdated"
+        />
       </div>
+      <div 
+        class="card-holder"
+      >
+        <pizza-card 
+          v-if="createPizza" 
+          isNew
+          @canceled="createPizza = false"
+          @pizzaCreated="pizzaCreated"
+        />
+        <button v-else @click="createPizza = true">New pizza</button>
+      </div>
+    </div>
+    <div class="list-menu">
+      TODO
     </div>
   </div>
 </template>
@@ -25,8 +42,19 @@ export default {
   data() {
     return {
       pizzas: data.pizza,
+      createPizza: false,
     };
   },
+  methods: {
+    pizzaCreated(event) {
+      this.pizzas.push(event)
+    },
+    pizzaUpdated(event) {
+      let index = this.pizzas.findIndex(pizza => pizza.id === event.id);
+      this.pizzas[index].description = event.description;
+      this.pizzas[index].price = event.price;
+    }
+  }
 }
 </script>
 
@@ -37,7 +65,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+h2 {
+  margin: 0;
 }
 
 .gallery {
