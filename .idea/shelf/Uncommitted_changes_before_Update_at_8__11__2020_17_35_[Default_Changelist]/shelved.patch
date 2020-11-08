@@ -1,0 +1,65 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># WebDevelopment-2020\nV tomto kurze si podrobnejšie prejdeme základné spôsoby narábania s dátami vo Vue.js\nProjekt obsahuje predpripravenú pizza kartu v ktorej sú praktické ukážky metód, premenných a žívotných cyklov Vue komponent.\nTvojou úlohou bude vytvoriť pizza list ktorý bude zobrazovať rovnaké dáta ako pizza\n\n- 1. Vytvor si svoju vlastnu local branch podla predpisu **meno/(kurz-poradove cislo)-nazov-kurzu**\n- 2. Vytvor kompoentu pizza-menu, ktorá bude dostávať zoznam všetkých dostupných pizz\n- 3. Vytvor komponentu list-item ktorá bude zobrazovať meno pizze, ingrediencie a cenu v jendom riadku. Skús vytvoriť podobný dizajn ako mávajú reštaurácie \n- 4. Vytvor detskú variantu pizze ktorá bude o 3€ lacnejšia ako povodna pizza\n- 5. Umožni pridávať nové pizze do menučka\n- 6. Pizza, ktorá sa pridá do menu sa musí pridať aj do galérie v kartičkách\n- 7. Umožni pridávať nové ingrediencie do pizze\n\n## BONUS\n- Pizza menu bude obsahovať všetky pizze okrem Hawaii, tá bude len v kartičke\n- Pridaj do pizze gramáž, detaská pizza bude mať rozdielnu gramáž ako veľká pizza (poprípade nejaké ingrediencie navyše atď.)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- README.md	(revision a3d122a468642a5632a3faf43a9f8acba86d802f)
++++ README.md	(date 1604245857463)
+@@ -1,16 +1,19 @@
+ # WebDevelopment-2020
++## Vue - data-handling
+ V tomto kurze si podrobnejšie prejdeme základné spôsoby narábania s dátami vo Vue.js
+ Projekt obsahuje predpripravenú pizza kartu v ktorej sú praktické ukážky metód, premenných a žívotných cyklov Vue komponent.
+ Tvojou úlohou bude vytvoriť pizza list ktorý bude zobrazovať rovnaké dáta ako pizza
+ 
+-- 1. Vytvor si svoju vlastnu local branch podla predpisu **meno/(kurz-poradove cislo)-nazov-kurzu**
+-- 2. Vytvor kompoentu pizza-menu, ktorá bude dostávať zoznam všetkých dostupných pizz
+-- 3. Vytvor komponentu list-item ktorá bude zobrazovať meno pizze, ingrediencie a cenu v jendom riadku. Skús vytvoriť podobný dizajn ako mávajú reštaurácie 
+-- 4. Vytvor detskú variantu pizze ktorá bude o 3€ lacnejšia ako povodna pizza
+-- 5. Umožni pridávať nové pizze do menučka
+-- 6. Pizza, ktorá sa pridá do menu sa musí pridať aj do galérie v kartičkách
+-- 7. Umožni pridávať nové ingrediencie do pizze
++Ulohy:
+ 
+-## BONUS
++1. Vytvor si svoju vlastnu local branch podla predpisu **meno/(kurz-poradove cislo)-nazov-kurzu**
++2. Vytvor kompoentu pizza-menu, ktorá bude dostávať zoznam všetkých dostupných pizz
++3. Vytvor komponentu list-item ktorá bude zobrazovať meno pizze, ingrediencie a cenu v jendom riadku. Skús vytvoriť podobný dizajn ako mávajú reštaurácie 
++4. Vytvor detskú variantu pizze ktorá bude o 3€ lacnejšia ako povodna pizza
++5. Umožni pridávať nové pizze do menučka
++6. Pizza, ktorá sa pridá do menu sa musí pridať aj do galérie v kartičkách
++7. Umožni pridávať nové ingrediencie do pizze
++
++__BONUS__
+ - Pizza menu bude obsahovať všetky pizze okrem Hawaii, tá bude len v kartičke
+ - Pridaj do pizze gramáž, detaská pizza bude mať rozdielnu gramáž ako veľká pizza (poprípade nejaké ingrediencie navyše atď.)
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:kurz\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:kurz\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b9558744-1c83-4a52-82f8-60698381add8\" name=\"Default Changelist\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/data-handling/src/App.vue\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/data-handling/src/App.vue\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/data-handling/src/components/HelloWorld.vue\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1jNPSiGQRqXWmL0pPIKrUatxQ8f\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b9558744-1c83-4a52-82f8-60698381add8\" name=\"Default Changelist\" comment=\"\" />\n      <created>1603641577964</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1603641577964</updated>\n      <workItem from=\"1603641585399\" duration=\"1503000\" />\n      <workItem from=\"1604236682788\" duration=\"25000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"[kurz-1] Update README\">\n      <created>1603643050861</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1603643050861</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"[kurz-2] Init project\">\n      <created>1604233901992</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1604233901992</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"[kurz-2] Remove unused files\">\n      <created>1604233978878</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1604233978878</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"[kurz-1] Update README\" />\n    <MESSAGE value=\"[kurz-2] Init project\" />\n    <MESSAGE value=\"[kurz-2] Remove unused files\" />\n    <MESSAGE value=\"[kurz-2] Add less loader\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"[kurz-2] Remove unused files\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"390\" y=\"0\" key=\"CommitChangelistDialog2\" timestamp=\"1604233978418\">\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\n    </state>\n    <state x=\"390\" y=\"0\" key=\"CommitChangelistDialog2/0.0.1536.824@0.0.1536.824\" timestamp=\"1604233978418\" />\n    <state x=\"614\" y=\"313\" key=\"Git.Rebase.Log.Action.NewCommitMessage.Dialog\" timestamp=\"1604236703573\">\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\n    </state>\n    <state x=\"614\" y=\"313\" key=\"Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1536.824@0.0.1536.824\" timestamp=\"1604236703573\" />\n    <state x=\"361\" y=\"132\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1604233984059\">\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\n    </state>\n    <state x=\"361\" y=\"132\" key=\"Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1604233984059\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision a3d122a468642a5632a3faf43a9f8acba86d802f)
++++ .idea/workspace.xml	(date 1604304592771)
+@@ -31,8 +31,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="b9558744-1c83-4a52-82f8-60698381add8" name="Default Changelist" comment="">
+-      <change beforePath="$PROJECT_DIR$/data-handling/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/data-handling/src/App.vue" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/data-handling/src/components/HelloWorld.vue" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -74,6 +73,7 @@
+       <updated>1603641577964</updated>
+       <workItem from="1603641585399" duration="1503000" />
+       <workItem from="1604236682788" duration="25000" />
++      <workItem from="1604304581966" duration="12000" />
+     </task>
+     <task id="LOCAL-00001" summary="[kurz-1] Update README">
+       <created>1603643050861</created>
