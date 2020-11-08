@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Jozko Rozko",
+      "email": "Jozko@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Pizza Guy",
+      "email": "guy@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Pizza Manager",
+      "email": "manager@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Najvacsi Panko",
+      "email": "panko@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Donald Trump",
+      "email": "trump@gmail.com"
+    }
+  ]
+}
