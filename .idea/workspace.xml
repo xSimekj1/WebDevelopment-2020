@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:kurz" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:kurz" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9558744-1c83-4a52-82f8-60698381add8" name="Default Changelist" comment="">
+    <list default="true" id="ece0a62f-a75e-418f-9d44-75723f970a2c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data-handling/src/components/MenuItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-handling/src/components/PizzaMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-handling/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/data-handling/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data-handling/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/data-handling/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-handling/src/components/HelloWorld.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +16,22 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="kurz/2-vue-data-handling" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1jNPSiGQRqXWmL0pPIKrUatxQ8f" />
+  <component name="ProjectId" id="1jhOZXzdlI9MR9nYg4ruqG41qKQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,81 +39,40 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Zadanie5" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b9558744-1c83-4a52-82f8-60698381add8" name="Default Changelist" comment="" />
-      <created>1603641577964</created>
+      <changelist id="ece0a62f-a75e-418f-9d44-75723f970a2c" name="Default Changelist" comment="" />
+      <created>1604252914146</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1603641577964</updated>
-      <workItem from="1603641585399" duration="1503000" />
-      <workItem from="1604236682788" duration="25000" />
+      <updated>1604252914146</updated>
+      <workItem from="1604252915374" duration="7555000" />
+      <workItem from="1604335564342" duration="62000" />
     </task>
-    <task id="LOCAL-00001" summary="[kurz-1] Update README">
-      <created>1603643050861</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1603643050861</updated>
-    </task>
-    <task id="LOCAL-00002" summary="[kurz-2] Init project">
-      <created>1604233901992</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1604233901992</updated>
-    </task>
-    <task id="LOCAL-00003" summary="[kurz-2] Remove unused files">
-      <created>1604233978878</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1604233978878</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="[kurz-1] Update README" />
-    <MESSAGE value="[kurz-2] Init project" />
-    <MESSAGE value="[kurz-2] Remove unused files" />
-    <MESSAGE value="[kurz-2] Add less loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="[kurz-2] Remove unused files" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1604233978418">
+    <state x="725" y="167" key="FileChooserDialogImpl" timestamp="1604335638320">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="390" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604233978418" />
-    <state x="614" y="313" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1604236703573">
+    <state x="725" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604335638320" />
+    <state x="595" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604256013316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="614" y="313" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1536.824@0.0.1536.824" timestamp="1604236703573" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1604233984059">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604233984059" />
+    <state x="595" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604256013316" />
   </component>
 </project>

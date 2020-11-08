@@ -28,7 +28,9 @@
       </div>
     </div>
     <div class="list-menu">
-      TODO
+      <pizza-menu :menu="pizzas" @createPizza="pizzaCreated"
+      ></pizza-menu>
+
     </div>
   </div>
 </template>
@@ -37,10 +39,12 @@
 import data from './assets/data.json';
 
 import PizzaCard from './components/PizzaCard.vue'
+import PizzaMenu from "@/components/PizzaMenu";
 
 export default {
   name: 'App',
   components: {
+    PizzaMenu,
     PizzaCard
   },
   // App.vue je root komponent, nasa skutocna stranka ktoru vidime, vsetko ostatne je len obsah ktory sa v nom generuje
