@@ -31,19 +31,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9558744-1c83-4a52-82f8-60698381add8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axios/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/axios/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/axios/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/axios/src/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +76,7 @@
       <updated>1604853913599</updated>
       <workItem from="1604853914646" duration="8387000" />
       <workItem from="1605454406127" duration="297000" />
-      <workItem from="1605454708471" duration="154000" />
+      <workItem from="1605454708471" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="kurz/3 init">
       <created>1604854747703</created>
@@ -108,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604855616234</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="kurz/4 Init">
+      <created>1605454898276</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605454898276</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,13 +127,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kurz/3 init" />
     <MESSAGE value="kurz/3 ADD Less-loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="kurz/3 ADD Less-loader" />
+    <MESSAGE value="kurz/4 Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="kurz/4 Init" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1604855615568">
+    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1605454897530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604855615568" />
+    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605454897530" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604855590255">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
